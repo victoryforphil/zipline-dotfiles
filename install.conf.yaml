@@ -10,3 +10,12 @@
     ~/.julia/config/startup.jl:
       - using Revise
       - include("$(ENV["HOME"])/.julia/config/startup.jl")
+
+
+# Install Oh My Zsh (using wget )
+# 1. Install ZSH using apt
+# 2. Install Oh My Zsh using wget
+- apt:
+  - zsh
+- shell:
+  - [sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)", Installing Oh My Zsh]
