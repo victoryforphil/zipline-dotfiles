@@ -6,7 +6,7 @@
   - tmux
   - btop
   - wget
-  
+
 - link:
     ~/.tmux.conf: dot-files/tmux.conf
 
@@ -23,3 +23,7 @@
 
 - shell:
   - [sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)", Installing Oh My Zsh]
+  - [chsh -s $(which zsh), Changing default shell to Zsh]
+  - [source ~/.zshrc, Reloading Zsh]
+  - [echo "source ~/.julia/config/startup.jl" >> ~/.zshrc, Adding Julia startup script to Zsh]
+
