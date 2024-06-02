@@ -1,0 +1,12 @@
+- defaults:
+    link:
+      relink: true
+- link:
+    ~/.tmux.conf: dot-files/tmux.conf
+
+- shell:
+  - [julia -e 'using Pkg; Pkg.add("Revise")', Installing Julia package Revise]
+- create:
+    ~/.julia/config/startup.jl:
+      - using Revise
+      - include("$(ENV["HOME"])/.julia/config/startup.jl")
